@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <g id="svg_4">
+   <path d="m145.69,235.07c-43.32,-69.63 -81.28,-172.85 -81.62,-243.78l7.02,-8.54c3.49,80.3 37.42,173.95 84.03,248.47l-9.43,3.85z" fill="#333333" id="svg_1" transform="rotate(-24.8064 109.593 108.91)"/>
+   <rect fill="#333333" height="2.79" id="svg_2" transform="rotate(-24.8064 183.15 192.687) matrix(2.27235 -1.43507 1.53051 2.13066 -370.894 66.4246)" width="13.48" x="133.53" y="152.34"/>
+   <rect fill="#333333" height="23.1" id="svg_3" transform="matrix(1.9055 -1.80346 2.07289 1.33102 -393.423 252.149)" width="4.12" x="139.15" y="147.66"/>
+  </g>
+ </g>
+</svg>

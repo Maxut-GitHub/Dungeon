@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <rect fill="#00bf00" height="103.73" id="svg_21" width="31.23" x="134.8" y="53.37"/>
+  <path d="m149.37,75.09c-19.64,0 -35.55,-15.94 -35.55,-35.61c0,-19.68 15.91,-35.62 35.55,-35.62c19.64,0 35.55,15.94 35.55,35.62c0,19.67 -15.91,35.61 -35.55,35.61z" fill="#00bf00" id="svg_22" opacity="undefined"/>
+  <rect fill="#00bf00" height="90.62" id="svg_28" transform="rotate(-24.2552 180.268 105.829)" width="12.51" x="174.01" y="60.52"/>
+  <rect fill="#00bf00" height="108.3" id="svg_29" transform="rotate(12.5621 132.148 193.615)" width="16.7" x="123.8" y="139.46"/>
+  <rect fill="#00bf00" height="110.37" id="svg_51" transform="rotate(-15.4265 173.031 192.604)" width="16.7" x="164.68" y="137.42"/>
+  <rect fill="#00bf00" height="49.46" id="svg_9" transform="rotate(25.4139 128.97 89.8974)" width="12.95" x="122.5" y="65.17"/>
+  <g id="svg_8" transform="rotate(-22.4705 79.4764 68.0063)">
+   <g id="svg_2">
+    <rect fill="#333333" height="74.67" id="svg_6" transform="rotate(17.9114 74.946 74.9446)" width="6.58" x="71.66" y="37.61"/>
+    <path d="m76.99,40.57l3.6,-14.05l10.78,0l3.6,14.05l-3.6,14.04l-10.78,0l-3.6,-14.04z" fill="#333333" id="svg_1" transform="rotate(16.6425 85.9848 40.561)"/>
+    <rect fill="#333333" height="4.49" id="svg_5" transform="rotate(16.6425 88.4794 32.4117)" width="17.42" x="79.77" y="30.16"/>
+    <rect fill="#333333" height="5.06" id="svg_7" transform="rotate(16.6425 83.572 48.8287)" width="17.42" x="74.86" y="46.3"/>
+   </g>
+  </g>
+  <rect fill="#00bf00" height="62.14" id="svg_3" transform="matrix(-0.00642858 1.02592 -0.870011 -0.165835 175.253 63.9499)" width="12.95" x="46.11" y="57.71"/>
+ </g>
+</svg>

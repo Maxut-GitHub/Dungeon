@@ -1,0 +1,15 @@
+<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
+ <g id="Layer_1">
+  <title>Layer 1</title>
+  <rect stroke="null" id="svg_5" height="275.00003" width="528.94743" y="-15.73081" x="-13.46363" fill="#4c4c4c"/>
+  <rect transform="rotate(92.3675 305.225 144.418)" stroke="null" id="svg_11" height="14.47144" width="106.81089" y="137.18229" x="251.81932" fill="#333333"/>
+  <rect transform="rotate(-88.7745 58.9808 106.215)" stroke="null" id="svg_12" height="11.84211" width="157.96489" y="100.29429" x="-20.00163" fill="#7f7f7f"/>
+  <rect transform="rotate(171.052 259.059 110.825)" stroke="null" id="svg_13" height="11.37602" width="142.05577" y="105.13727" x="188.03136" fill="#7f7f7f"/>
+  <rect transform="rotate(-169.933 117.538 107.979)" stroke="null" id="svg_14" height="11.84211" width="155.48455" y="102.05754" x="39.79573" fill="#7f7f7f"/>
+  <rect transform="rotate(179.745 346.86 167.033)" stroke="null" id="svg_15" height="11.84211" width="177.618" y="161.11193" x="258.05133" fill="#333333"/>
+  <text transform="matrix(3.34944 0 0 3.36171 -389.717 -50.1744)" stroke="null" xml:space="preserve" text-anchor="start" font-family="'Texturina'" font-size="24" stroke-width="0" id="svg_3" y="39.41202" x="136.66929" fill="#ffffff">Dungeon</text>
+  <rect transform="rotate(-80.8573 409.397 108.296)" stroke="null" id="svg_16" height="17.24747" width="157.88134" y="99.6721" x="330.45664" fill="#333333"/>
+  <text transform="matrix(1.06755 0 0 1.23166 -4.56096 -29.8988)" stroke="null" xml:space="preserve" text-anchor="start" font-family="'Rubik'" font-size="24" id="svg_17" y="151.65207" x="69.98712" stroke-width="0" fill="#e5e5e5">Пройди 30 комнат для победы</text>
+ </g>
+
+</svg>

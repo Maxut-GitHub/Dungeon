@@ -1,0 +1,16 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_21" height="103.73472" width="31.22545" y="53.24999" x="111.04791" fill="#00bf00" stroke="null"/>
+  <path fill="#00bf00" stroke="null" opacity="undefined" d="m121.86982,74.33786c-19.64145,0 -35.55103,-15.93697 -35.55103,-35.61225c0,-19.67528 15.90958,-35.61225 35.55103,-35.61225c19.64145,0 35.55103,15.93697 35.55103,35.61225c0,19.67528 -15.90958,35.61225 -35.55103,35.61225z" id="svg_22"/>
+  <rect transform="rotate(-27.4866 151.587 94.895)" stroke="null" id="svg_28" height="101.13702" width="14.20688" y="44.32651" x="144.48349" fill="#00bf00"/>
+  <rect transform="rotate(12.5621 108.398 193.49)" stroke="null" id="svg_29" height="108.30055" width="16.69509" y="139.33948" x="100.04997" fill="#00bf00"/>
+  <rect transform="rotate(-15.4265 146.781 189.979)" stroke="null" id="svg_51" height="110.37402" width="16.69509" y="134.79207" x="138.43296" fill="#00bf00"/>
+  <rect transform="rotate(18.2104 100.303 106.093)" stroke="null" fill="#00bf00" x="93.87382" y="67.78563" width="12.85737" height="76.61412" id="svg_9"/>
+  <g transform="rotate(-13.0215 64.9529 98.8711)" stroke="null" id="svg_4">
+   <rect stroke="null" transform="matrix(-0.296855 -0.954032 -0.944964 0.299704 235.164 201.685)" id="svg_2" height="6.6711" width="107.47444" y="119.28939" x="92.55195" fill="#333333"/>
+   <path stroke="null" id="svg_3" d="m56.73778,103.58384l7.9143,-39.19741l-4.55352,-10.18479l-25.15786,0.35663l21.79709,49.02556z" opacity="undefined" fill="#333333"/>
+  </g>
+ </g>
+
+</svg>

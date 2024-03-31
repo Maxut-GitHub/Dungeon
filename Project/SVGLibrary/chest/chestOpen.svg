@@ -1,0 +1,21 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="91.17622" width="180.14656" y="131.43311" x="36.76665" fill="#bfbf00"/>
+  <rect stroke="null" id="svg_4" height="97.05856" width="16.17643" y="129.96253" x="204.41324" fill="#7f3f00"/>
+  <rect stroke="null" id="svg_5" height="94.85268" width="16.91172" y="131.43311" x="30.14902" fill="#7f3f00"/>
+  <rect id="svg_6" height="16.91172" width="177.20539" y="210.10937" x="31.6196" fill="#7f3f00"/>
+  <path id="svg_11" d="m45.59015,136.58016" opacity="NaN" stroke="null" fill="none"/>
+  <rect stroke="null" id="svg_12" height="73.52921" width="152.94075" y="65.99211" x="47.79603" fill="#7f7f00"/>
+  <rect stroke="null" id="svg_13" height="11.76467" width="176.47012" y="130.69782" x="36.76665" fill="#7f3f00"/>
+  <rect stroke="null" id="svg_16" height="9.5588" width="153.67606" y="65.25682" x="45.59015" fill="#7f3f00"/>
+  <rect transform="rotate(-10.2546 201.104 100.183)" stroke="null" id="svg_17" height="68.38217" width="12.49996" y="65.99211" x="194.85444" fill="#7f3f00"/>
+  <rect transform="rotate(7.67168 48.5313 101.654)" stroke="null" id="svg_18" height="63.97041" width="14.70584" y="69.66858" x="41.1784" fill="#7f3f00"/>
+  <g id="svg_23">
+   <ellipse stroke="null" ry="9.92644" rx="11.02938" id="svg_21" cy="168.56536" cx="124.26641" fill="#000000"/>
+   <rect stroke="null" id="svg_22" height="18.3823" width="11.76467" y="149.08012" x="118.38408" fill="#000000"/>
+  </g>
+  <path id="svg_25" d="m86.24531,58.8778l9.9551,-13.66713l27.27183,37.42282l45.46126,-62.37137l9.95862,13.65747l-55.41988,76.04816" stroke="null" fill="#00bf00"/>
+ </g>
+
+</svg>

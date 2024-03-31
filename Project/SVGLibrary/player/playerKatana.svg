@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g class="layer">
+  <title>Layer 1</title>
+  <rect fill="#00bf00" height="103.73" id="svg_21" transform="matrix(1 0 0 1 0 0)" width="31.23" x="147.9" y="51.09"/>
+  <path d="m161.98,72.18c-19.64,0 -35.55,-15.94 -35.55,-35.61c0,-19.68 15.91,-35.61 35.55,-35.61c19.64,0 35.55,15.93 35.55,35.61c0,19.67 -15.91,35.61 -35.55,35.61z" fill="#00bf00" id="svg_22" opacity="undefined"/>
+  <rect fill="#00bf00" height="106.09" id="svg_29" transform="matrix(1 0 0 1 0 0) rotate(12.5621 144.773 195.754)" width="16.7" x="136.43" y="142.71"/>
+  <rect fill="#00bf00" height="116.9" id="svg_51" transform="rotate(-15.4265 182.065 190.967)" width="16.7" x="173.72" y="132.52"/>
+  <rect fill="#00bf00" height="76.61" id="svg_9" transform="rotate(6.83032 140.003 105.967) matrix(0.949932 0.312458 -0.312458 0.949932 40.1199 -38.4394)" width="12.86" x="133.57" y="67.66"/>
+  <use id="svg_11" transform="matrix(0.574804 0 0 0.574804 9.15563 -25.3287)" x="6.6" xlink:href="#svg_10" y="76.74"/>
+  <rect fill="#00bf00" height="78.23" id="svg_28" transform="rotate(4.88581 153.365 114.127) matrix(0.850526 0.462008 -0.44432 0.884385 72.7932 -56.0956)" width="12.49" x="147.17" y="73.22"/>
+ </g>
+ <defs>
+  <symbol height="250" id="svg_10" width="250" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+   <g class="layer">
+    <title>Layer 1</title>
+    <g id="svg_5">
+     <path d="m145.69,235.07c-43.32,-69.63 -81.28,-172.85 -81.62,-243.78l7.02,-8.54c3.49,80.3 37.42,173.95 84.03,248.47l-9.43,3.85z" fill="#333333" id="svg_8" transform="rotate(-24.8064 109.593 108.91)"/>
+     <rect fill="#333333" height="2.79" id="svg_7" transform="rotate(-24.8064 183.15 192.687) matrix(2.27235 -1.43507 1.53051 2.13066 -370.894 66.4246)" width="13.48" x="133.53" y="152.34"/>
+     <rect fill="#333333" height="23.1" id="svg_6" transform="matrix(1.9055 -1.80346 2.07289 1.33102 -393.423 252.149)" width="4.12" x="139.15" y="147.66"/>
+    </g>
+   </g>
+  </symbol>
+ </defs>
+</svg>

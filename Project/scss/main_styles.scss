@@ -1,0 +1,16 @@
+@import "_fonts.scss";
+@import "_gamePage_styles.scss";
+@import "_recordsPage_styles.scss";
+@import "_mainMenuPage_styles.scss";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: #4c4c4c;
+	overflow: hidden;
+	user-select: none;
+}

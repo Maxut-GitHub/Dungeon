@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+
+
+  <circle cx="52.14" cy="49.56" fill="url(#svg_1)"  r="49.91"  />
+  <circle cx="182.64" cy="40.06" fill="url(#svg_1)"  r="41.58" />
+
+
+  <radialGradient id="svg_1" >
+   <stop id="jq_stop_2335" offset="0" stop-color="#FF0000"/>
+   <stop id="jq_stop_4362" offset="1" stop-opacity="0"/>
+  </radialGradient>
+
+</svg>
