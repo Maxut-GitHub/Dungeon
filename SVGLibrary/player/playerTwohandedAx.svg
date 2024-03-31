@@ -1,0 +1,19 @@
+<svg width="249.99999999999997" height="249.99999999999997" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_21" height="103.73472" width="31.22545" y="53.87499" x="82.29796" fill="#00bf00" stroke="null"/>
+  <path fill="#00bf00" stroke="null" opacity="undefined" d="m96.86987,75.58786c-19.64145,0 -35.55103,-15.93697 -35.55103,-35.61225c0,-19.67528 15.90958,-35.61225 35.55103,-35.61225c19.64145,0 35.55103,15.93697 35.55103,35.61225c0,19.67528 -15.90958,35.61225 -35.55103,35.61225z" id="svg_22"/>
+  <path fill="#00bf00" stroke="null" opacity="undefined" transform="rotate(-35.5401 111.751 84.8839)" d="m105.65685,43.257l12.18761,0l0,83.25379l-12.18761,0l0,-83.25379z" id="svg_28"/>
+  <rect stroke="null" id="svg_29" height="108.30055" width="16.69509" y="139.96448" x="71.30002" fill="#00bf00" transform="rotate(12.5621 79.6476 194.115)"/>
+  <rect stroke="null" id="svg_51" height="110.37402" width="16.69509" y="137.91706" x="112.18301" fill="#00bf00" transform="rotate(-15.4265 120.531 193.104)"/>
+  <path transform="rotate(-124.841 114.373 109.996)" stroke="null" fill="#333333" opacity="undefined" d="m112.67941,-17.8008l5.90427,0l0,255.06825l-8.42035,0.52463l2.51608,-255.59288z" id="svg_6"/>
+  <rect fill="#00bf00" x="69.68346" y="52.72044" width="12.57961" height="109.30233" id="svg_9" stroke="null" transform="rotate(18.3249 75.9733 107.372)"/>
+  <path fill="#333333" stroke="null" opacity="NaN" d="m206.9781,131.46533" id="svg_10"/>
+  <path transform="rotate(22.0387 145.41 102.502)" fill="#00bf00" opacity="undefined" d="m139.21982,78.81917l12.38005,0l0,47.365l-12.38005,0l0,-47.365z" id="svg_15" stroke="null"/>
+  <g id="svg_4">
+   <path transform="rotate(-31.1342 200.004 66.1397)" stroke="null" id="svg_2" d="m159.53277,77.31861l50.99115,-23.60007l15.89352,0.64263l14.05723,24.19973l-80.9419,-1.2423z" fill="#333333"/>
+   <path transform="rotate(-36.3347 197.363 41.9459)" stroke="null" id="svg_3" d="m181.36968,35.11171l16.50679,15.85745l14.84491,-0.42999l0.63407,-17.61654l-31.98576,2.18909z" fill="#333333"/>
+  </g>
+ </g>
+
+</svg>

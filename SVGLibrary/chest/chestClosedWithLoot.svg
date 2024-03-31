@@ -1,0 +1,22 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="91.17622" width="180.14656" y="131.43311" x="36.76665" fill="#bfbf00"/>
+  <rect stroke="null" id="svg_4" height="97.05856" width="16.17643" y="129.96253" x="204.41324" fill="#7f3f00"/>
+  <rect stroke="null" id="svg_5" height="94.85268" width="16.91172" y="131.43311" x="30.14902" fill="#7f3f00"/>
+  <rect id="svg_6" height="16.91172" width="177.20539" y="210.10937" x="31.6196" fill="#7f3f00"/>
+  <path id="svg_11" d="m45.59015,136.58016" opacity="NaN" stroke="null" fill="none"/>
+  <rect id="svg_12" height="34.55873" width="152.94075" y="104.9626" x="47.79603" stroke="null" fill="#bfbf00"/>
+  <rect stroke="null" id="svg_13" height="13.97055" width="176.47012" y="128.49195" x="36.76665" fill="#7f3f00"/>
+  <rect id="svg_16" height="9.5588" width="161.76426" y="102.02143" x="44.11957" stroke="null" fill="#7f3f00"/>
+  <rect stroke="null" id="svg_17" height="24.26464" width="13.97055" y="109.37435" x="194.85444" fill="#7f3f00"/>
+  <rect id="svg_18" height="24.26464" width="14.70584" y="109.37435" x="41.1784" stroke="null" fill="#7f3f00"/>
+  <g id="svg_23">
+   <ellipse stroke="null" ry="9.92644" rx="11.02938" id="svg_21" cy="168.56536" cx="124.26641" fill="#000000"/>
+   <rect stroke="null" id="svg_22" height="18.3823" width="11.76467" y="149.08012" x="118.38408" fill="#000000"/>
+  </g>
+  <rect stroke="#000000" stroke-opacity="0" id="svg_3" height="59" width="45" y="22.33777" x="174.14731" fill="#000000"/>
+  <path fill="#00bf00" d="m198.00592,6.95871c-26.92393,0 -48.7497,20.28806 -48.7497,45.31421c0,8.54712 2.58029,16.54132 7.02024,23.36319l-7.02024,19.07327l19.54502,-6.21275c8.14536,5.67943 18.23595,9.08707 29.20468,9.08707c26.92384,0 48.7503,-20.28818 48.7503,-45.31078s-21.82645,-45.31421 -48.7503,-45.31421zm3.02255,70.9329l-6.85614,0l0,-8.15238l6.85614,0l0,8.15238zm-0.33409,-14.15776l-6.18795,0l-0.6124,-34.88374l7.35763,0l-0.55728,34.88374l0,0z" id="svg_8" stroke="null"/>
+ </g>
+
+</svg>

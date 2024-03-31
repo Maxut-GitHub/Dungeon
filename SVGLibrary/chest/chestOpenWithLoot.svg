@@ -1,0 +1,20 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <rect fill="#bfbf00" x="36.76665" y="131.43311" width="180.14656" height="91.17622" id="svg_1"/>
+  <rect fill="#7f3f00" x="204.41324" y="129.96253" width="16.17643" height="97.05856" id="svg_4" stroke="null"/>
+  <rect fill="#7f3f00" x="30.14902" y="131.43311" width="16.91172" height="94.85268" id="svg_5" stroke="null"/>
+  <rect fill="#7f3f00" x="31.6196" y="210.10937" width="177.20539" height="16.91172" id="svg_6"/>
+  <path fill="none" stroke="null" opacity="NaN" d="m45.59015,136.58016" id="svg_11"/>
+  <rect fill="#7f7f00" x="47.79603" y="65.99211" width="152.94075" height="73.52921" id="svg_12" stroke="null"/>
+  <rect fill="#7f3f00" x="36.76665" y="130.69782" width="176.47012" height="11.76467" id="svg_13" stroke="null"/>
+  <rect fill="#7f3f00" x="45.59015" y="65.25682" width="153.67606" height="9.5588" id="svg_16" stroke="null"/>
+  <rect fill="#7f3f00" x="194.85444" y="65.99211" width="12.49996" height="68.38217" id="svg_17" stroke="null" transform="rotate(-10.2546 201.104 100.183)"/>
+  <rect fill="#7f3f00" x="41.1784" y="69.66858" width="14.70584" height="63.97041" id="svg_18" stroke="null" transform="rotate(7.67168 48.5313 101.654)"/>
+  <g id="svg_23">
+   <ellipse fill="#000000" cx="124.26641" cy="168.56536" id="svg_21" rx="11.02938" ry="9.92644" stroke="null"/>
+   <rect fill="#000000" x="118.38408" y="149.08012" width="11.76467" height="18.3823" id="svg_22" stroke="null"/>
+  </g>
+ </g>
+
+</svg>

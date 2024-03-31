@@ -1,0 +1,14 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="null" fill="#00bf00" x="82.29796" y="53.87499" width="31.22545" height="103.73472" id="svg_21"/>
+  <path id="svg_22" d="m96.86987,75.58786c-19.64145,0 -35.55103,-15.93697 -35.55103,-35.61225c0,-19.67528 15.90958,-35.61225 35.55103,-35.61225c19.64145,0 35.55103,15.93697 35.55103,35.61225c0,19.67528 -15.90958,35.61225 -35.55103,35.61225z" opacity="undefined" stroke="null" fill="#00bf00"/>
+  <rect transform="rotate(-66.9511 145.998 91.8555)" stroke="null" fill="#00bf00" x="139.7419" y="46.54476" width="12.51249" height="90.62153" id="svg_28"/>
+  <rect transform="rotate(12.5621 79.6476 194.115)" fill="#00bf00" x="71.30002" y="139.96448" width="16.69509" height="108.30055" id="svg_29" stroke="null"/>
+  <rect transform="rotate(-15.4265 120.531 193.104)" fill="#00bf00" x="112.18301" y="137.91706" width="16.69509" height="110.37402" id="svg_51" stroke="null"/>
+  <path transform="rotate(69.8511 213.204 94.9989)" stroke="null" id="svg_5" d="m191.16476,84.33638l44.07769,0l0,21.32505l-44.07769,0l0,-21.32505z" opacity="undefined" fill="#333333"/>
+  <rect transform="rotate(73.1805 113.151 124.763)" stroke="null" id="svg_6" height="212.36088" width="7.1434" y="18.58239" x="109.57954" fill="#333333"/>
+  <rect transform="rotate(25.4139 77.3112 99.8715)" stroke="null" id="svg_9" height="109.30233" width="12.94872" y="45.22033" x="70.83688" fill="#00bf00"/>
+ </g>
+
+</svg>
