@@ -248,25 +248,33 @@ function morePlayersForRecordTable(recordsArray) {
 	return recordsArray;
 }
 
-//ПРОВЕРКА НА ОРИЕНТАЦИЮ ЭКРАНА ДЛЯ МОБИЛЬНЫХ УСТРООЙСТВ
-let body = document.getElementsByTagName(`body`)[0];
-window.addEventListener(`orientationchange`, orientationMobileChange);
-//Темное модальнео стекло с сообщением перевернуть экран
-let orientationModalGlass = document.createElement(`div`);
-orientationModalGlass.style.cssText = `position: fixed; width: 100%; height: 100%; background-color: black; z-index: 7; color: white;
+//проверка на телефон
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+	//Проверка на ориентацию экрана для мобильных устройств
+	let body = document.getElementsByTagName(`body`)[0];
+	window.addEventListener(`orientationchange`, orientationMobileChange);
+	//Темное модальнео стекло с сообщением перевернуть экран
+	let orientationModalGlass = document.createElement(`div`);
+	orientationModalGlass.style.cssText = `position: fixed; width: 100%; height: 100%; background-color: black; z-index: 7; color: white;
 font-size: 8vw; display: flex; justify-content: center; align-items: center; top: 0`
-orientationModalGlass.id = `orientationModalGlass`
-orientationModalGlass.textContent = `Переверните экран`
-function orientationMobileChange() {
-	if (window.matchMedia('(orientation: landscape)').matches) {
-		body.appendChild(orientationModalGlass);
-	} else {
-		if (document.getElementById(`orientationModalGlass`)) {
-			orientationModalGlass.remove()
+	orientationModalGlass.id = `orientationModalGlass`
+	orientationModalGlass.textContent = `Переверните экран`
+	function orientationMobileChange() {
+		if (window.matchMedia('(orientation: landscape)').matches) {
+			body.appendChild(orientationModalGlass);
+		} else {
+			if (document.getElementById(`orientationModalGlass`)) {
+				orientationModalGlass.remove()
+			}
 		}
 	}
-}
-if (window.matchMedia('(orientation: landscape)').matches) {
-} else {
-	body.appendChild(orientationModalGlass);
-}
+	if (window.matchMedia('(orientation: landscape)').matches) {
+	} else {
+		body.appendChild(orientationModalGlass);
+	}
+
+	console.log(`Пользователь использует мобильное устройство`)
+	//СЮДА УПРАВЛЕНИЕ
+
+} else
+	console.log(`Пользователь использует ПК`)
