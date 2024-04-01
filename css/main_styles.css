@@ -245,7 +245,7 @@
 
 #mobileController__LeftAndRight {
   display: flex;
-  width: 40%;
+  width: 30%;
   position: absolute;
   left: 85%;
   top: 20%;

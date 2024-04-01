@@ -306,7 +306,7 @@ function playerWin() {
 		document.getElementById(`mobileController`).style.display = `none`;
 	}
 	//чтобы появилась дверь
-	doorElement.classList = `appearanceDoor`;
+	doorElement.classList.toggle('appearanceDoor');
 	//оповещение Сколько уровней осталось? (после 11 и 21 уровня)
 	view.levelsLeft()
 }
@@ -439,7 +439,7 @@ function nextRoom() {
 		floor.appendChild(enemyElement)
 	}
 	//убрать дверь
-	doorElement.classList = ``
+	doorElement.classList = ``;
 }
 
 //Проверка полоски здоровья
