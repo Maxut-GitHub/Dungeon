@@ -101,7 +101,6 @@ let recordData =
 export let currentLevel = 20;
 //текущий уровень (тег) показывается в левом верхнем углу экрана
 let currentLevelElement = document.getElementById(`levelText`);
-currentLevelElement.textContent = `level ` + currentLevel + ` Работа над выпускным проектом Максима Б. группа FD2-140-23-12`;
 
 //коэфициент расчета здоровья врагов
 let enemyHPIndex = 0.2;
@@ -181,7 +180,7 @@ export let player = {
 //Элемент игрока
 export let playerElement = document.createElement(`div`);
 playerElement.style.cssText = `background-image: url(SVGLibrary/player/player.svg);
-background-size: contain; background-repeat: no-repeat; width: 5vw; height: 5vw; position: absolute; z-index: 4`
+background-size: contain; background-repeat: no-repeat; width: 5vw; height: 5vw; position: absolute; z-index: 4; pointer-events: none;`
 
 //Проверка инвентаря у игрока (показать оружие в руке, если есть в инвентаре и показать оружие/доспехи в слотах) дать игроку урон исходя из его оружия + обновить круг урона
 function checkInventory() {
@@ -302,6 +301,10 @@ function playerWin() {
 	console.log(`%cКомната зачищена!`, `color: Lime`);
 	gameStatus = `roomClear`;
 	chest.status = `open`;
+	//убираем кнопки мобильного управления, чтобы они не мешали взаимодейтвовать с объектами в комнате
+	if (document.getElementById(`mobileController`)) {
+		document.getElementById(`mobileController`).style.display = `none`;
+	}
 	//чтобы появилась дверь
 	doorElement.classList = `appearanceDoor`;
 	//оповещение Сколько уровней осталось? (после 11 и 21 уровня)
@@ -502,6 +505,11 @@ function enterTheDoor() {
 		player.posY = 80;
 		gameStatus = `fight`;
 	}
+
+	//снова добавляем управление для мобилки, если оно было
+	if (document.getElementById(`mobileController`)) {
+		document.getElementById(`mobileController`).style.display = `block`
+	}
 }
 
 let timer;
@@ -691,21 +699,35 @@ if (userDevice === `mobile`) {
 	let mobileController = document.createElement(`div`);
 	mobileController.id = `mobileController`;
 
+	//кнопки /\ \/
 	mobileController.appendChild(mobileController__up)
 	mobileController__up.classList = `mobileController__button`
 	mobileController__up.style.backgroundImage = ` url(SVGLibrary/mobileController/up.svg)`
-
-	mobileController.appendChild(mobileController__left)
-	mobileController__left.classList = `mobileController__button`
-	mobileController__left.style.backgroundImage = `url(SVGLibrary/mobileController/left.svg)`
 
 	mobileController.appendChild(mobileController__down)
 	mobileController__down.classList = `mobileController__button`
 	mobileController__down.style.backgroundImage = ` url(SVGLibrary/mobileController/down.svg)`
 
+	let mobileController__UpAndDown = document.createElement(`div`);
+	mobileController__UpAndDown.id = `mobileController__UpAndDown`;
+	mobileController__UpAndDown.appendChild(mobileController__up)
+	mobileController__UpAndDown.appendChild(mobileController__down)
+	mobileController.appendChild(mobileController__UpAndDown)
+
+	//кнопки <- ->
+	mobileController.appendChild(mobileController__left)
+	mobileController__left.classList = `mobileController__button`
+	mobileController__left.style.backgroundImage = `url(SVGLibrary/mobileController/left.svg)`
+
 	mobileController.appendChild(mobileController__right)
 	mobileController__right.classList = `mobileController__button`
 	mobileController__right.style.backgroundImage = ` url(SVGLibrary/mobileController/right.svg)`
+
+	let mobileController__LeftAndRight = document.createElement(`div`);
+	mobileController__LeftAndRight.id = `mobileController__LeftAndRight`;
+	mobileController__LeftAndRight.appendChild(mobileController__left)
+	mobileController__LeftAndRight.appendChild(mobileController__right)
+	mobileController.appendChild(mobileController__LeftAndRight)
 
 	gameField.insertBefore(mobileController, gameField.firstChild);
 }

@@ -132,6 +132,7 @@ function switchToStateFromURLHash() {
 		case 'Rules':
 			pageHTML += `<div class="rules-section" >
 				Ваша цель - пройти как можно дальше (вплоть до 30 уровня).<br><br>
+				Управление: WASD или стрелки на клавиатуре / кнопки на экране, если вы  на мобильном устройстве.<br><br>
 				Чтобы перейти на следующий этаж, нужно победить всех противников в комнате. Чтобы наносить урон врагу, нужно подойти к противнику так, чтобы ваша область атаки доставала до него.<br><br>
 				После победы не забудьте открыть сундук (кликнув по нему). В сундуке может быть элемент брони или оружие. ВНИМАТЕЛЬНО смотрите на характеристики предмета найденного в сундуке. Если предмет в сундуке ХУЖЕ вашего, то брать его не стоит.<br><br>
 				Чтобы прейти на следующий этаж, нужно кликнуть на дверь.<br><br>
@@ -274,8 +275,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 	window.addEventListener(`orientationchange`, orientationMobileChange);
 	//Темное модальнео стекло с сообщением перевернуть экран
 	let orientationModalGlass = document.createElement(`div`);
-	orientationModalGlass.style.cssText = `position: fixed; width: 100 %; height: 100 %; background - color: black; z - index: 7; color: white;
-			font - size: 8vw; display: flex; justify - content: center; align - items: center; top: 0`
+	orientationModalGlass.style.cssText = `position: fixed; width: 100%; height: 100%; background-color: black; z-index: 7; color: white;
+			font-size: 8vw; display: flex; justify-content: center; align-items: center; top: 0`
 	orientationModalGlass.id = `orientationModalGlass`
 	orientationModalGlass.textContent = `Переверните экран`
 	function orientationMobileChange() {

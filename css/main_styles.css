@@ -227,27 +227,38 @@
 #mobileController {
   display: flex;
   flex-wrap: wrap;
-  width: 27%;
+  width: 80%;
   height: 30%;
   font-size: 2vw;
   z-index: 5;
   position: absolute;
-  left: 70%;
+  left: 5%;
   top: 30%;
 }
 
+#mobileController__UpAndDown {
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  top: -20%;
+}
+
+#mobileController__LeftAndRight {
+  display: flex;
+  width: 40%;
+  position: absolute;
+  left: 85%;
+  top: 20%;
+}
+
 .mobileController__button {
-  height: 50%;
-  width: 31%;
+  height: 9vw;
+  width: 9vw;
   background-color: rgb(136, 136, 136);
   border-radius: 10%;
   opacity: 0.5;
-  margin: 0 2% 0 0;
+  margin: 1vw;
   background-position: center;
-}
-
-.mobileController__button:first-child {
-  margin: 0 33% 2% 33%;
 }
 
 .records-section {
