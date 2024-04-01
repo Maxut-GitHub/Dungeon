@@ -14,7 +14,7 @@
 #gameField {
 	position: absolute;
 	display: flex;
-	margin: 1%;
+	margin: 0 1%;
 	width: 98%;
 	height: 48vw;
 }
@@ -42,4 +42,29 @@
 	to {
 		transform: translate(0, 0);
 	}
+}
+
+#mobileController {
+	display: flex;
+	flex-wrap: wrap;
+	width: 27%;
+	height: 30%;
+	font-size: 2vw;
+	z-index: 5;
+	position: absolute;
+	left: 70%;
+	top: 30%;
+}
+.mobileController__button {
+	height: 50%;
+	width: 31%;
+	background-color: rgb(136, 136, 136);
+	border-radius: 10%;
+	opacity: 0.5;
+	margin: 0 2% 0 0;
+	background-position: center;
+}
+
+.mobileController__button:first-child {
+	margin: 0 33% 2% 33%;
 }

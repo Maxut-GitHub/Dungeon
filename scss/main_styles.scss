@@ -2,6 +2,7 @@
 @import "_gamePage_styles.scss";
 @import "_recordsPage_styles.scss";
 @import "_mainMenuPage_styles.scss";
+@import "_RulesPage_styles.scss";
 
 * {
 	box-sizing: border-box;
@@ -11,6 +12,14 @@
 
 html {
 	background-color: #4c4c4c;
-	overflow: hidden;
 	user-select: none;
+	overflow: hidden;
+}
+
+.exitToMainMenuButton {
+	width: 10vw;
+	margin: 2%;
+	font-size: 2vw;
+	border: solid black 0.3vw;
+	border-radius: 2vw;
 }

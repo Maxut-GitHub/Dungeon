@@ -1,5 +1,6 @@
 
-import { player, chest, chestElement } from './model.js';
+import { player, chest, chestElement, mobileController__up, mobileController__down, mobileController__left, mobileController__right } from './model.js';
+import { userDevice } from './SPA.js';
 
 
 chestElement.addEventListener(`click`, function () { chest.open() })
@@ -57,3 +58,16 @@ function playerStopRight(event) {
 	}
 }
 
+if (userDevice === `mobile`) {
+	mobileController__up.addEventListener("touchstart", function () { document.dispatchEvent(new KeyboardEvent('keydown', { code: 'ArrowUp', })); this.style.backgroundColor = `rgb(85, 85, 85)`; }, { passive: true });
+	mobileController__up.addEventListener("touchend", function () { document.dispatchEvent(new KeyboardEvent('keyup', { code: 'ArrowUp' })); this.style.backgroundColor = `rgb(136, 136, 136)`; }, { passive: true });
+
+	mobileController__left.addEventListener("touchstart", function () { document.dispatchEvent(new KeyboardEvent('keydown', { code: 'ArrowLeft', })); this.style.backgroundColor = `rgb(85, 85, 85)`; }, { passive: true });
+	mobileController__left.addEventListener("touchend", function () { document.dispatchEvent(new KeyboardEvent('keyup', { code: 'ArrowLeft' })); this.style.backgroundColor = `rgb(136, 136, 136)`; }, { passive: true });
+
+	mobileController__down.addEventListener("touchstart", function () { document.dispatchEvent(new KeyboardEvent('keydown', { code: 'ArrowDown', })); this.style.backgroundColor = `rgb(85, 85, 85)`; }, { passive: true });
+	mobileController__down.addEventListener("touchend", function () { document.dispatchEvent(new KeyboardEvent('keyup', { code: 'ArrowDown' })); this.style.backgroundColor = `rgb(136, 136, 136)`; }, { passive: true });
+
+	mobileController__right.addEventListener("touchstart", function () { document.dispatchEvent(new KeyboardEvent('keydown', { code: 'ArrowRight', })); this.style.backgroundColor = `rgb(85, 85, 85)`; }, { passive: true });
+	mobileController__right.addEventListener("touchend", function () { document.dispatchEvent(new KeyboardEvent('keyup', { code: 'ArrowRight' })); this.style.backgroundColor = `rgb(136, 136, 136)`; }, { passive: true });
+}

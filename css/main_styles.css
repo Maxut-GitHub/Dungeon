@@ -196,7 +196,7 @@
 #gameField {
   position: absolute;
   display: flex;
-  margin: 1%;
+  margin: 0 1%;
   width: 98%;
   height: 48vw;
 }
@@ -224,6 +224,32 @@
     transform: translate(0, 0);
   }
 }
+#mobileController {
+  display: flex;
+  flex-wrap: wrap;
+  width: 27%;
+  height: 30%;
+  font-size: 2vw;
+  z-index: 5;
+  position: absolute;
+  left: 70%;
+  top: 30%;
+}
+
+.mobileController__button {
+  height: 50%;
+  width: 31%;
+  background-color: rgb(136, 136, 136);
+  border-radius: 10%;
+  opacity: 0.5;
+  margin: 0 2% 0 0;
+  background-position: center;
+}
+
+.mobileController__button:first-child {
+  margin: 0 33% 2% 33%;
+}
+
 .records-section {
   width: 90%;
   display: flex;
@@ -265,14 +291,6 @@
   font-size: 1.5vw;
 }
 
-.exitRecordsButton {
-  width: 10vw;
-  margin: 2%;
-  font-size: 2vw;
-  border: solid black 0.3vw;
-  border-radius: 2vw;
-}
-
 .main-menu {
   background-color: #4c4c4c;
   background-image: url(../SVGLibrary/Dungeon_Logo.svg);
@@ -283,8 +301,7 @@
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
-  flex-direction: column;
-  padding: 23% 33% 0;
+  padding: 23% 10% 0;
   gap: 5vh;
 }
 
@@ -296,6 +313,19 @@
   border-radius: 2vw;
 }
 
+.rules-section {
+  width: 90%;
+  height: 70vh;
+  border: solid black 0.1vw;
+  background-color: #b7b7b7;
+  border-radius: 1vw;
+  margin: 1% 5%;
+  padding: 2%;
+  font-size: 1.5vw;
+  word-wrap: break-word;
+  overflow-y: auto;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -304,8 +334,16 @@
 
 html {
   background-color: #4c4c4c;
-  overflow: hidden;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  overflow: hidden;
+}
+
+.exitToMainMenuButton {
+  width: 10vw;
+  margin: 2%;
+  font-size: 2vw;
+  border: solid black 0.3vw;
+  border-radius: 2vw;
 }/*# sourceMappingURL=main_styles.css.map */

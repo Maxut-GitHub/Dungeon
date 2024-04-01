@@ -1,18 +1,14 @@
 let recordsArray; //Массив рекордов
 const ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
 
+//с чего сидит пользователь?
+export let userDevice;
+
 // отслеживаем изменение закладки в УРЛе
 window.onhashchange = switchToStateFromURLHash;
 // текущее состояние приложения
 var SPAState = {};
 // вызывается при изменении закладки УРЛа
-// а также при первом открытии страницы
-// читает новое состояние приложения из закладки УРЛа
-// и обновляет ВСЮ вариабельную часть веб-страницы
-// соответственно этому состоянию
-// это упрощённая реализация РОУТИНГА - автоматического выполнения нужных
-// частей кода в зависимости от формы URLа
-// "роутинг" и есть "контроллер" из MVC - управление приложением через URL
 function switchToStateFromURLHash() {
 	var URLHash = window.location.hash;
 	// убираем из закладки УРЛа решётку
@@ -34,12 +30,6 @@ function switchToStateFromURLHash() {
 			let mainMenu = document.createElement('div');
 			mainMenu.classList = "main-menu";
 
-			let startGame = document.createElement('button');
-			startGame.classList = `main-menu__button`;
-			startGame.textContent = `Начать игру`;
-			startGame.onclick = function () { switchToGamePage(); location.reload() };
-			mainMenu.appendChild(startGame);
-
 			let records = document.createElement('button');
 			records.classList = `main-menu__button`;
 			records.textContent = `Таблица рекордов`;
@@ -47,6 +37,18 @@ function switchToStateFromURLHash() {
 			mainMenu.appendChild(records);
 			document.getElementById('Page').innerHTML = pageHTML;
 			document.getElementById('Page').appendChild(mainMenu)
+
+			let startGame = document.createElement('button');
+			startGame.classList = `main-menu__button`;
+			startGame.textContent = `Начать игру`;
+			startGame.onclick = function () { switchToGamePage(); location.reload() };
+			mainMenu.appendChild(startGame);
+
+			let rules = document.createElement('button');
+			rules.classList = `main-menu__button`;
+			rules.textContent = `Правила игры`;
+			rules.onclick = function () { switchToRulesPage(); };
+			mainMenu.appendChild(rules);
 			break;
 		case 'Records':
 			pageHTML += `<div class="records-section">
@@ -62,56 +64,53 @@ function switchToStateFromURLHash() {
 				<div class="records-section__slot">8. `+ recordsArray[7].playerName + ` (` + recordsArray[7].killCount + `kills) (` + recordsArray[7].roomPast + `room)</div>
 				<div class="records-section__slot">9. `+ recordsArray[8].playerName + ` (` + recordsArray[8].killCount + `kills) (` + recordsArray[8].roomPast + `room)</div>
 				<div class="records-section__slot">10. `+ recordsArray[9].playerName + ` (` + recordsArray[9].killCount + ` kills) (` + recordsArray[9].roomPast + ` room)</div>
-			</div>
-		</div>
-		<div class="description">Автор выпускного проекта: ЖЖЖЖЖЖЖ ЖЖЖЖЖЖЖЖ. Группа Md-FD2-140-23.<br> Преподаватель: ЖЖЖЖЖЖЖ ЖЖЖЖЖЖ.<br>
-		</div>`;
+			</div>`
 			let exitRecords = document.createElement('button');
-			exitRecords.classList = `exitRecordsButton`;
+			exitRecords.classList = `exitToMainMenuButton`;
 			exitRecords.textContent = `Назад`;
 			exitRecords.onclick = function () { switchToMainMenuPage(); };
 			document.getElementById('Page').innerHTML = pageHTML;
 			document.getElementById('Page').insertBefore(exitRecords, document.getElementsByClassName(`records-section`)[0]);
 			break;
 		case 'Game':
-			pageHTML += `<div id="levelText">level
-			<span id="level">1</span>
-		</div>
-		<div id="gameField">
-			<div id="room">
-				<div id="doorTop"></div>
-				<div id="floor"></div>
-				<div id="doorButton"></div>
-			</div>
-			<div class="interface">
-				<div id="lifePanel" class="interface__panel">
-					<div id="healsbar" class="interface__healsbar">
-						<div id="HP"></div>
-						<div id="HPcount"></div>
+			pageHTML += `<div id = "levelText" > level
+				<span span span id = "level" > 1</span >
+		</div >
+				<div id="gameField">
+					<div id="room">
+						<div id="doorTop"></div>
+						<div id="floor"></div>
+						<div id="doorButton"></div>
 					</div>
-					<div id="lifeText" class="interface__text">Здоровье</div>
-				</div>
-				<div id="weaponPanel" class="interface__panel">
-					<div id="weaponSlot" class="interface__slot"></div>
-					<div id="weaponText" class="interface__text">Оружие</div>
-				</div>
-				<div id="bootsPanel" class="interface__panel">
-					<div id="bootsSlot" class="interface__slot"></div>
-					<div id="bootsText" class="interface__text">Сапоги</div>
-				</div>
-				<div id="bodyArmorPanel" class="interface__panel">
-					<div id="bodyArmorSlot" class="interface__slot"></div>
-					<div id="bodyArmorText" class="interface__text">Нагрудник</div>
-				</div>
-				<div id="helmetPanel" class=" interface__panel">
-					<div id="helmetSlot" class="interface__slot"></div>
-					<div id="helmetText" class="interface__text">Шлем</div>
-				</div>
-				<div id="menuPanel" class="interface__panel">
-					<button id="menuButton">Меню</button>
-				</div>
-			</div>
-		</div>`;
+					<div class="interface">
+						<div id="lifePanel" class="interface__panel">
+							<div id="healsbar" class="interface__healsbar">
+								<div id="HP"></div>
+								<div id="HPcount"></div>
+							</div>
+							<div id="lifeText" class="interface__text">Здоровье</div>
+						</div>
+						<div id="weaponPanel" class="interface__panel">
+							<div id="weaponSlot" class="interface__slot"></div>
+							<div id="weaponText" class="interface__text">Оружие</div>
+						</div>
+						<div id="bootsPanel" class="interface__panel">
+							<div id="bootsSlot" class="interface__slot"></div>
+							<div id="bootsText" class="interface__text">Сапоги</div>
+						</div>
+						<div id="bodyArmorPanel" class="interface__panel">
+							<div id="bodyArmorSlot" class="interface__slot"></div>
+							<div id="bodyArmorText" class="interface__text">Нагрудник</div>
+						</div>
+						<div id="helmetPanel" class=" interface__panel">
+							<div id="helmetSlot" class="interface__slot"></div>
+							<div id="helmetText" class="interface__text">Шлем</div>
+						</div>
+						<div id="menuPanel" class="interface__panel">
+							<button id="menuButton">Меню</button>
+						</div>
+					</div>
+				</div>`;
 			let ModelScript = document.createElement('script');
 			ModelScript.type = "module";
 			ModelScript.src = "scripts/model.js";
@@ -129,6 +128,23 @@ function switchToStateFromURLHash() {
 			for (let el of scriptsAndOther) {
 				document.getElementById('Page').appendChild(el);
 			}
+			break;
+		case 'Rules':
+			pageHTML += `<div class="rules-section" >
+				Ваша цель - пройти как можно дальше (вплоть до 30 уровня).<br><br>
+				Чтобы перейти на следующий этаж, нужно победить всех противников в комнате. Чтобы наносить урон врагу, нужно подойти к противнику так, чтобы ваша область атаки доставала до него.<br><br>
+				После победы не забудьте открыть сундук (кликнув по нему). В сундуке может быть элемент брони или оружие. ВНИМАТЕЛЬНО смотрите на характеристики предмета найденного в сундуке. Если предмет в сундуке ХУЖЕ вашего, то брать его не стоит.<br><br>
+				Чтобы прейти на следующий этаж, нужно кликнуть на дверь.<br><br>
+				Дойти до конца - непросто. Нужно правильно позиционировать героя в комнате и быть удачливым на награды.<br><br>
+				Чтобы попасть в таблицу лидеров, нужно пройти как можно дальше и убить как можно больше врагов (ну тут как повезет).<br><br><br>
+				Выпускной проет Максима Бабухина Александровича. Группа FD2-140-23-12. 
+				</div > `;
+			let exitRules = document.createElement('button');
+			exitRules.classList = `exitToMainMenuButton`;
+			exitRules.textContent = `Назад`;
+			exitRules.onclick = function () { switchToMainMenuPage(); };
+			document.getElementById('Page').innerHTML = pageHTML;
+			document.getElementById('Page').insertBefore(exitRules, document.getElementsByClassName(`rules-section`)[0]);
 			break;
 	}
 }
@@ -149,6 +165,9 @@ function switchToRecordsPage() {
 }
 function switchToGamePage() {
 	switchToState({ pagename: 'Game' });
+}
+function switchToRulesPage() {
+	switchToState({ pagename: 'Rules' });
 }
 
 //Чтение рекордов
@@ -255,8 +274,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 	window.addEventListener(`orientationchange`, orientationMobileChange);
 	//Темное модальнео стекло с сообщением перевернуть экран
 	let orientationModalGlass = document.createElement(`div`);
-	orientationModalGlass.style.cssText = `position: fixed; width: 100%; height: 100%; background-color: black; z-index: 7; color: white;
-font-size: 8vw; display: flex; justify-content: center; align-items: center; top: 0`
+	orientationModalGlass.style.cssText = `position: fixed; width: 100 %; height: 100 %; background - color: black; z - index: 7; color: white;
+			font - size: 8vw; display: flex; justify - content: center; align - items: center; top: 0`
 	orientationModalGlass.id = `orientationModalGlass`
 	orientationModalGlass.textContent = `Переверните экран`
 	function orientationMobileChange() {
@@ -272,9 +291,10 @@ font-size: 8vw; display: flex; justify-content: center; align-items: center; top
 	} else {
 		body.appendChild(orientationModalGlass);
 	}
-
 	console.log(`Пользователь использует мобильное устройство`)
-	//СЮДА УПРАВЛЕНИЕ
+	userDevice = `mobile`
 
-} else
+} else {
 	console.log(`Пользователь использует ПК`)
+	userDevice = `PC`
+}

@@ -2,6 +2,8 @@
 //импорт всех предметов
 import allItemsArray from './items.js';
 import * as view from './view.js';
+import { userDevice } from './SPA.js';
+
 function tick() {
 	//Передвижение игрока
 	view.playerPositionUpdate()
@@ -677,4 +679,33 @@ function vibro() {
 		// вибрация 50мс
 		window.navigator.vibrate(50);
 	}
+}
+
+//добавление кнопок для управления для мобильных устройств
+export let mobileController__up = document.createElement(`div`);
+export let mobileController__left = document.createElement(`div`);
+export let mobileController__down = document.createElement(`div`);
+export let mobileController__right = document.createElement(`div`);
+if (userDevice === `mobile`) {
+	const gameField = document.getElementById(`gameField`);
+	let mobileController = document.createElement(`div`);
+	mobileController.id = `mobileController`;
+
+	mobileController.appendChild(mobileController__up)
+	mobileController__up.classList = `mobileController__button`
+	mobileController__up.style.backgroundImage = ` url(SVGLibrary/mobileController/up.svg)`
+
+	mobileController.appendChild(mobileController__left)
+	mobileController__left.classList = `mobileController__button`
+	mobileController__left.style.backgroundImage = `url(SVGLibrary/mobileController/left.svg)`
+
+	mobileController.appendChild(mobileController__down)
+	mobileController__down.classList = `mobileController__button`
+	mobileController__down.style.backgroundImage = ` url(SVGLibrary/mobileController/down.svg)`
+
+	mobileController.appendChild(mobileController__right)
+	mobileController__right.classList = `mobileController__button`
+	mobileController__right.style.backgroundImage = ` url(SVGLibrary/mobileController/right.svg)`
+
+	gameField.insertBefore(mobileController, gameField.firstChild);
 }
