@@ -90,6 +90,9 @@ function tick() {
 	}
 }
 
+//сохранил ли пользователь свой результат в рекорды?
+let recordSave = false;
+//результат пользователя 
 let recordData =
 {
 	playerName: `name`,
@@ -98,14 +101,14 @@ let recordData =
 }
 
 //текущий уровень комнаты (все скейлы зависят ОТ ЭТОГО ЧИСЛА)
-export let currentLevel = 20;
+export let currentLevel = 1;
 //текущий уровень (тег) показывается в левом верхнем углу экрана
 let currentLevelElement = document.getElementById(`levelText`);
 
 //коэфициент расчета здоровья врагов
-let enemyHPIndex = 0.2;
+const enemyHPIndex = 0.2;
 //коэфициент расчета урона врагов
-let enemyDamageIndex = 0.01;
+const enemyDamageIndex = 0.01;
 //коэфициент расчета скорости врагов
 let enemySpeedXIndex = 0.3;
 let enemySpeedYIndex = 0.3;
@@ -115,7 +118,10 @@ export let enemyArray = [];
 //массив врагов ЭЛЕМЕНТОВ (тегов)
 export let enemyElArray = [];
 
-//подсчет фрагов
+//громкость звуков
+const audioVolume = 0.5;
+
+//подсчет убийств
 let allkillsCount = 0;
 let roomKillsCount = 0;
 
@@ -127,9 +133,9 @@ export let chest = {};
 export let chestElement = document.createElement(`div`);
 
 //элементы игрового поля и body
-export let body = document.getElementsByTagName(`body`)[0];
-export let room = document.getElementById(`room`);
-export let floor = document.getElementById(`room`);
+export const body = document.getElementsByTagName(`body`)[0];
+export const room = document.getElementById(`room`);
+export const floor = document.getElementById(`room`);
 
 //верхняя дверь
 let doorElement = document.getElementById(`doorTop`);
@@ -237,8 +243,11 @@ function createArrayEnemy() {
 	if (enemyCount > 20) {
 		enemyCount = 20;
 	}
-	//Если уровнь больше 20, то минимум противников = 10
-	if (enemyCount < 10 && currentLevel > 20) {
+	//Если уровень больше 10, то минимум противников = 5. Если уровень больше 20, то минимум противников = 10
+	if (enemyCount < 5 && currentLevel > 10 && currentLevel <= 20) {
+		enemyCount = 5;
+	} else if
+		(enemyCount < 10 && currentLevel > 20) {
 		enemyCount = 10;
 	}
 	for (let i = 0; i < enemyCount; i++) {
@@ -299,16 +308,21 @@ function createArrayEnemy() {
 
 function playerWin() {
 	console.log(`%cКомната зачищена!`, `color: Lime`);
-	gameStatus = `roomClear`;
-	chest.status = `open`;
+	//оповещение Сколько уровней осталось? (после 11 и 21 и 30 уровня)
+	view.levelsLeft()
 	//убираем кнопки мобильного управления, чтобы они не мешали взаимодейтвовать с объектами в комнате
 	if (document.getElementById(`mobileController`)) {
 		document.getElementById(`mobileController`).style.display = `none`;
 	}
+	if (currentLevel === 30) {
+		playerPast30Levels();
+		return;
+	}
+	vibro();
+	gameStatus = `roomClear`;
+	chest.status = `open`;
 	//чтобы появилась дверь
 	doorElement.classList.toggle('appearanceDoor');
-	//оповещение Сколько уровней осталось? (после 11 и 21 уровня)
-	view.levelsLeft()
 }
 
 //создать сундук и положить в него лут (+меню с лутом)
@@ -333,13 +347,6 @@ function createChest() {
 	//Здесь определаяется, какой ИМЕННО лут будет в сундуке (находится объект в массиве allItemsArray)
 	let item = Math.floor((Math.random() * allItemsArray[lootTypeNumber].length));
 	loot = allItemsArray[lootTypeNumber][item];
-	//ДЛЯ ТЕСТА ПРЕДМЕТОВ
-	// if (currentLevel === 1) {
-	// 	lootType = `weapon`
-	// 	loot = allItemsArray[3][6];
-	// }
-
-	console.log(`%cВ сундуке лежит ${loot.name}`, `color: yellow`);
 	chest = {
 		loot: loot,
 		posX: randomPositionFloor(`X`),
@@ -455,7 +462,6 @@ function checkHealsbar() {
 		player.speedX = 0;
 		player.speedY = 0;
 		player.HP = undefined;
-		vibro();
 		menu();
 		recordData.killCount = allkillsCount;
 		recordData.roomPast = currentLevel === 30 ? 30 : currentLevel - 1
@@ -512,10 +518,15 @@ function enterTheDoor() {
 	}
 }
 
+//Победа игрока (после 30 увроней, конец игры)
+function playerPast30Levels() {
+	gameStatus = `win`
+	setTimeout(menu, 3000)
+}
+
 let timer;
 //Начать игру заного
-export default function startGame() {
-	currentLevel = 1;
+function startGame() {
 	checkInventory();
 	playerInRoom();
 	createArrayEnemy();
@@ -559,20 +570,23 @@ function menu() {
 		border: solid black`
 		records.textContent = `Записать мой результат в рекорды`;
 		records.disabled = true;
-		if (pastGameStatus === `defeat`) {
+		if (pastGameStatus === `defeat` || pastGameStatus === `win`) {
 			records.disabled = false;
 		}
 		records.onclick = function () {
 			let playerName = prompt(`Введите ваше имя
-Максимум 10 символов, не менее 3 симолов`).trim()
+Максимум 10 символов, не менее 3 симолов`).trim();
 			if (playerName.length > 10 || playerName.length < 3) {
 				alert(`Не пойдет, введите другое имя`)
+			} else if (/[&<>`'"]/.test(playerName)) {
+				alert(`Без использования символов: &<>'"\``);
 			} else {
 				recordData.playerName = playerName;
 				alert(`Готово!
 В списке рекордов отображаються только 10 лучших.`)
 				records.disabled = true;
-				console.log(`%c \\/ ДАННЫЕ ИГРОКА`, `color: Lime`);
+				recordSave = true;
+				console.log(`%c \\/ РЕКОРД ИГРОКА ` + recordData.playerName, `color: Lime`);
 				console.log(recordData)
 				updateRecords(recordData)
 			}
@@ -584,7 +598,7 @@ function menu() {
 		border: solid black`
 		mainMenu.textContent = `Главное меню`;
 		mainMenu.onclick = function () {
-			if (pastGameStatus != `defeat`) {
+			if (!recordSave) {
 				window.dispatchEvent(new Event('popstate'))
 			} else {
 				window.removeEventListener('popstate', exitGame);
@@ -594,7 +608,6 @@ function menu() {
 				modalGlass.remove(); menuElement.remove(); window.location.hash = `#MainMenu`;
 			}
 		};
-
 		//---------------------------------------------------------------------------------------------------------------------
 		let menuStats = document.createElement(`div`);
 		menuStats.style.cssText = `width: 30%; height: 100%; background-color: rgb(113, 113, 113); border-radius: 2vw;
@@ -610,12 +623,14 @@ function menu() {
 }
 startGame()
 
-//К соожалению, не знаю как сделать так, чтобы нормальноо рабоотало и при нажатии кнопки "назад"
+//К соожалению, не знаю как сделать так, чтобы нормально работало и при нажатии кнопки "назад"
 //exit - true Если пользователь подтвердил (в окне confirm), что хочет уйти, false если нажал "отмена"
 let exit;
 window.addEventListener('popstate', exitGame)
 function exitGame() {
-	exit = confirm(`Ваш прогресс не сохранится! Вы уверены?`);
+	if (!recordSave) {
+		exit = confirm(`Ваш прогресс не сохранится! Вы уверены?`);
+	}
 	if (exit || window.location.hash != `#Game`) {
 		clearInterval(timer);
 		window.removeEventListener('popstate', exitGame);
@@ -648,6 +663,7 @@ async function updateRecords(newRecordData) {
 
 	//jsonим его и отправляем
 	let recordsArrayJSON = JSON.stringify(currentRecords)
+
 	if (recordsArrayJSON) {
 		console.log(`РАБОТАЕТ UPDATE:`)
 		let UPDATE = new URLSearchParams();
@@ -671,6 +687,8 @@ async function updateRecords(newRecordData) {
 //Звуки при смерти врага. (2 разновидности)
 const deathAudioOne = new Audio("sounds/deathAudioOne.mp3");
 const deathAudioTwo = new Audio("sounds/deathAudioTwo.mp3");
+deathAudioOne.volume = audioVolume;
+deathAudioTwo.volume = audioVolume;
 function deathSound() {
 	if (Math.round(Math.random())) {
 		deathAudioOne.currentTime = 0;

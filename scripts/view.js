@@ -169,17 +169,22 @@ export function locationView() {
 	}
 }
 
-//оповещение Сколько уровней осталось? (после 11 и 21 уровня)
+//оповещение: сколько уровней осталось? + оповещение о победе
 export function levelsLeft() {
-	if (currentLevel === 10 || currentLevel === 20) {
+	if (currentLevel === 10 || currentLevel === 20 || currentLevel === 30) {
 		let message = document.createElement(`div`);
-		message.textContent = `ОСТАЛОСЬ ${30 - currentLevel} УРОВНЕЙ`
 		message.style.cssText = `position: absolute; left: 20vw; top: 10vw;
 		font-size: 5vw; pointer-events: none; z-index: 4;`
 		if (currentLevel === 10) {
+			message.textContent = `ОСТАЛОСЬ 20 УРОВНЕЙ`
 			message.style.textShadow = `green 2vw 0 4vw`
 		} else if (currentLevel === 20) {
+			message.textContent = `ОСТАЛОСЬ 10 УРОВНЕЙ`
 			message.style.textShadow = `red 2vw 0 4vw`
+		} else if (currentLevel === 30) {
+			message.style.left = `35vw`;
+			message.textContent = `! ПОБЕДА !`
+			message.style.textShadow = `yellow 2vw 0 4vw`
 		}
 		message.classList = `appearanceMessage`
 		body.appendChild(message);
